@@ -19,7 +19,7 @@ pipeline{
             steps{
             gitCheckout(
                 branch: "main",
-                url: "https://github.com/pralayn/Java_app_3.0.git"
+                url: "https://github.com/Pralay-95/Java_app_3.0.git"
             )
             }
         }
