@@ -72,13 +72,12 @@ pipeline{
                }
             }
         }
-        stage('send artifact : jfrog'){
-         when { expression {  params.action == 'create' } }
-            steps{
-               script{
-                   
-                   send arti()
-               }
+        sstage ('Pushing Jar to Jfrog : python'){
+          when { expression {  params.action == 'create' } }
+          steps{
+            script{
+                jfrogPush()
+                }
             }
         }
         stage('Docker Image Build'){
